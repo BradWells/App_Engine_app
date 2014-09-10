@@ -1,5 +1,5 @@
-application: hello-flask-app-engine
-version: 1
+application: portfolio-flask-app-engine
+version: 0.1
 runtime: python27
 api_version: 1
 threadsafe: yes

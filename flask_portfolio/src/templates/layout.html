@@ -1,0 +1,60 @@
+<!--Original copies from http://jinja.pocoo.org/docs/dev/templates/ -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="static/style.css" />
+    <title>{% block title %}{% endblock %} - Bradley Wells's Portfolio </title>
+    <!-- Following lines from https://realpython.com/blog/python/primer-on-jinja-templating/ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    {% endblock %}
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bradley Wells</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="about">About Me</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="resume.pdf">Resume</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="projects">My Projects</a></li>
+                <li class="divider"></li>
+                {% for n in projects %}
+                <li><a href="/projects{{n.url}}">{{n.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container">
+      <div class="top-padding">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+    <footer class="port-footer">
+      <div class="container">
+        <p>
+        &copy; Copyright 2014 by <a href="{{personal_url}}">Bradley Wells</a>.
+        </p>
+      </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
