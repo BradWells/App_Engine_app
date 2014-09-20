@@ -6,7 +6,11 @@ app.config['DEBUG'] = True
 # the App Engine WSGI application server.
 
 personal_url = 'http://www.bradleymwells.com'
-resume_rel_url = 'resume'
+resume_rel_url = 'old_resume.pdf'
+personal_phone = "815-677-8357"
+personal_address = "134"
+personal_github = "https://github.com/bradwells"
+
 
 class linkObj:
     """A container for relative links and their paired names"""
@@ -30,6 +34,7 @@ def home():
         home_url = url_for('home'),
         title = "Home",
         projects = projList,
+        resume_rel_url = resume_rel_url
         )
 
 @app.route('/about')
@@ -40,7 +45,8 @@ def about():
         personal_url = personal_url,
         home_url = url_for('home'),
         title = "About",
-        projects = projList
+        projects = projList,
+        resume_rel_url = resume_rel_url
         )
 
 @app.route('/contact')
@@ -51,7 +57,11 @@ def contact():
         personal_url = personal_url,
         home_url = url_for('home'),
         title = "Contact",
-        projects = projList
+        projects = projList,
+        resume_rel_url = resume_rel_url,
+        personal_phone = personal_phone,
+        personal_address = personal_address,
+        personal_github = personal_github
         )
 
 @app.route('/projects')
@@ -63,12 +73,9 @@ def projects():
         home_url = url_for('home'),
         title = "Projects",
         projects = projList,
-        test = url_for('projects')
+        test = url_for('projects'),
+        resume_rel_url = resume_rel_url
         )
-
-@app.rout('/resume.pdf')
-def resume():
-    return
 
 @app.errorhandler(404)
 def page_not_found(e):

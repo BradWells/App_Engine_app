@@ -1,10 +1,30 @@
 application: portfolio-flask-app-engine
-version: 0.1
+version: 0-1
 runtime: python27
 api_version: 1
 threadsafe: yes
 
 handlers:
+# All URLs ending in .gif .png or .jpg are treated as paths to static files in
+# the static/ directory. The URL pattern is a regexp, with a grouping that is
+# inserted into the path to the file.
+- url: /(.*\.(gif|png|jpg|pdf))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg|pdf)$
+
+# Static robots.txt
+- url: /robots.txt
+  static_files: static/robots.txt
+  upload: static/robots.txt
+
+# Alternative:
+# - url: /images
+#   static_dir: static/images
+
+# - url: /images/(.*)
+#   static_files: static/images/\1
+#   upload: static/images/.*
+
 - url: .*
   script: main.app
 
