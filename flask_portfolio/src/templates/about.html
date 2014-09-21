@@ -1,12 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
     <h1>About Me</h1>
+        <b>Since you found this page, you probably want to know a little about me.  I am a software engineer from Iowa State, and I am planning to graduate this spring (2015).  I grew up in a <a href="https://www.google.com/maps/place/Mt+Morris,+IL+61054/">small town</a> in Illinois, lived here in Ames, Iowa during school semesters, and during the summers I worked at <a href="www.digi.com">Digi International</a> and went to China on a mission trip.  My brother, Tim, has Down Syndrome, and having him in my life has given my an optomistic outlook, as well as a desire to improve the lives of others.</b>
         <h2>Education</h2>
             <h3>Software Engineering - Iowa State University (2011-2015)</h3>
-                <b>Iowa State is an incredible school!  Go Cyclones!  I love learning here, and being a part of the exponentially-growing Software Engineering program!  Some of the most helpful classes at Iowa State have been classes that allow me to work on a project with a team from start to finish.  You can find some of them <a href="/projects">here</a></b>
+                <b>Iowa State is an incredible school!  Go Cyclones!  I love learning here, and being a part of the exponentially-growing Software Engineering program!  Some of the most helpful classes at Iowa State have been classes that allow me to work on a project with a team from start to finish.  You can find some of them <a href="/projects">here</a>.</b>
         <h2>Experience</h2>
             <h3>Digi International Internship</h3>
-                <b>In the summer of 2013, I worked in the Systems Assurance section of Digi International.  I primarily worked with their Git repository of tests, which had become too big to handle, and they wanted to make it more modular for each of their teams.*********</b>
+                <b>In the summer of 2013, I worked in the Systems Assurance section of <a href="www.digi.com">Digi International</a>.  I primarily worked with their Git repository of tests, which had become too big to handle, and they wanted to make it more modular for each of their teams.  I worked to split the Git repository into two modular ones, organized in such a way that more modular git repostitories, one for shared test environment and one repository containing all of the individual projects' tests.  This change was made so that the latter repository could be broken down further into repositories for the tests of each individual project, to keep them seperate.  Additionally, the test environment repository could be installed as a python egg package in the user's python enviornment, making the process even cleaner.</b>
+                <div/>
+                <b>One problem with this new scheme is that the package name in all of the test code changed.  We looked for fixes or work-arounds so we would not have to refactor the old test codes, but after some analysis we decided that the best course of action would be to change the package names in all of the test code.  Because of this, one sub-project was to write a sed script in Bash that would replace the old name with the new, but change nothing else.  I set up my own repo for my changes, because I didn't want to risk polluting the main repository with name changes, and so I could also triple check that the sed script was working correctly and that all of the tests still passed.</b>
+                <div/>
+                <b>In addition to the main project, I also took on a side-project of updating our python Django web server from using an old API that used XML-RPC to send commands to the server in XML into one that used RESTful JSON requests to url's that ran code stored on the server itself.  It returned JSON that was much easier to manage and gave much more relevant, clean data to be used by our other systems.</b>
             <h3>Teaching Assistant for the ISU Computer Science Department</h3>
                 <b>***Replace Me***</b>
             <h3>Mission trip to China (Summer 2014)</h3>
@@ -18,8 +23,8 @@
                 <b>I have been involved with <a href="http://cornerstonelife.com/">Cornerstone Church</a> since I first came to ISU.  It has been a huge part of my life, I have made my dearest friends there, and it has helped me become closer to God.</b>
                 <h4>Tech Crew</h4>
                     <b>I regularily help out with many of the technical roles of Cornerstone.  I ran computer graphics for their childrens program, <a href="http://cornerstonelife.com/d6families/">D6</a> for a year, and frequently help out their 1,500 student college ministry <a href="www.thesaltcompany.com">The SALT Company</a>, by either running cameras to record their messages, directing the camera crew, or setting up and running the lighting equipment.</b>
-                <h4><a href="http://www.ifcinfo.com/">International Friendship Connection</a></h4>
-                    <b>For the past year and a half, I have been working with Cornerstone Church's international ministry, IFC.  Every week, we have a group of international students that come to a local house, eat food, have fun, sing worship songs, and then we study the Bible.  This year, I will be leading a group of international students in discussions of passages about parables, and what they mean.  It is great to create a family-like environment for students who are missing their own families.</b>
+                <h4>International Friendship Connection</h4>
+                    <b>For the past year and a half, I have been working with Cornerstone Church's international ministry, <a href="http://www.ifcinfo.com/">IFC</a>.  Every week, we have a group of international students that come to a local house, eat food, have fun, sing worship songs, and then we study the Bible.  This year, I will be leading a group of international students in discussions of passages about parables, and what they mean.  It is great to create a family-like environment for students who are missing their own families.</b>
             <h3>Entertainment!</h3>
                 <ul>
                     <li><h4>Frisbee Golf</h4></li>
