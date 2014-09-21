@@ -8,7 +8,7 @@ app.config['DEBUG'] = True
 personal_url = 'http://www.bradleymwells.com'
 resume_rel_url = 'old_resume.pdf'
 personal_phone = "815-677-8357"
-personal_address = "134"
+personal_address = "134 Campus Ave. Unit 17, Ames Iowa, 50014"
 personal_github = "https://github.com/bradwells"
 
 
