@@ -1,13 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>Contact Information</h1>
-    <h2>Send Me a Message</h2>
-    <b>***Replace with coolness***</b>
-    <h2>Contact Me Yourself</h2>
-    <h4>Phone</h4>
-    <b>{{personal_phone}}</b>
-    <h4>Address</h4>
-    <b>{{personal_address}}</b>
-    <h4>Github</h4>
-    <b>{{personal_github}}</b>
+    <div class="container">
+        <div class="top-padding">
+            <h1>Contact Information</h1>
+                <h2>Send Me a Message</h2>
+                    <p>***Replace with coolness***</p>
+                <h2>Contact Me Yourself</h2>
+                    <h4>Phone</h4>
+                        <p>{{personal_phone}}</p>
+                     <h4>Address</h4>
+                        <p>{{personal_address}}</p>
+                    <h4>Github</h4>
+                        <p>{{personal_github}}</p>
+        </div>
+    </div>
 {% endblock %}

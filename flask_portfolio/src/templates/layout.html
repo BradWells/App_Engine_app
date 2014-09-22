@@ -4,11 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     {% block head %}
-    <link rel="stylesheet" href="static/style.css" />
     <title>{% block title %}{% endblock %} - Bradley Wells's Portfolio </title>
     <!-- Following lines from https://realpython.com/blog/python/primer-on-jinja-templating/ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="static/style.css" />
     {% endblock %}
 </head>
 <body>
@@ -43,13 +43,9 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    <div class="container">
-      <div class="top-padding">
-        <!-- end template, start content -->
-        {% block content %}{% endblock %}
-        <!-- end content, start template -->
-      </div>
-    </div>
+    <!-- end template, start content -->
+    {% block content %}{% endblock %}
+    <!-- end content, start template -->
     <footer class="port-footer">
       <div class="container">
         <p>
