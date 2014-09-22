@@ -6,10 +6,10 @@ app.config['DEBUG'] = True
 # the App Engine WSGI application server.
 
 personal_url = 'http://www.bradleymwells.com'
-resume_rel_url = 'old_resume.pdf'
+resume_rel_url = 'resume_fall_2014.pdf'
 personal_phone = "815-677-8357"
 personal_address = "134 Campus Ave. Unit 17, Ames Iowa, 50014"
-personal_github = "https://github.com/bradwells"
+personal_email = "bradley.morgan.wells@gmail.com"
 
 
 class linkObj:
@@ -61,7 +61,7 @@ def contact():
         resume_rel_url = resume_rel_url,
         personal_phone = personal_phone,
         personal_address = personal_address,
-        personal_github = personal_github
+        personal_email = personal_email
         )
 
 @app.route('/projects')
