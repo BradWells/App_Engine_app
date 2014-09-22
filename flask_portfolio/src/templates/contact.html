@@ -4,14 +4,40 @@
         <div class="top-padding">
             <h1>Contact Information</h1>
                 <h2>Send Me a Message</h2>
-                    <p>***Replace with coolness***</p>
+                    <div class="icons">
+                        <a href="{{personal_facebook}}">
+                            <img src="Facebook-icon.png">
+                        </a>
+                        <a href="{{personal_github}}">
+                            <img src="GitHub-icon.png">
+                        </a>
+                        <a href="{{personal_gplus}}">
+                            <img src="GooglePlus-icon.png">
+                        </a>
+                        <a href="{{personal_linkedin}}">
+                            <img src="LinkedIn-icon.png">
+                        </a>
+                        <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                        <div id="SkypeButton_Call_Bradleo99_1">
+                          <script type="text/javascript">
+                            Skype.ui({
+                              "name": "dropdown",
+                              "element": "SkypeButton_Call_Bradleo99_1",
+                              "participants": ["Bradleo99"],
+                              "imageSize": 32
+                            });
+                          </script>
+                        </div>
+                    </div>
                 <h2>Contact Me Yourself</h2>
                     <h4>Phone</h4>
                         <p>{{personal_phone}}</p>
                      <h4>Address</h4>
                         <p>{{personal_address}}</p>
-                    <h4>Github</h4>
-                        <p>{{personal_github}}</p>
+                    <h4>Email</h4>
+                        <p>{{personal_email}}</p>
+                    <h4>Skype</h4>
+                        <p>{{personal_skype}}</p>
         </div>
     </div>
 {% endblock %}

@@ -5,12 +5,20 @@ app.config['DEBUG'] = True
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
 
-personal_url = 'http://www.bradleymwells.com'
 resume_rel_url = 'resume_fall_2014.pdf'
+
+personal_url = 'http://www.bradleymwells.com'
+
 personal_phone = "815-677-8357"
 personal_address = "134 Campus Ave. Unit 17, Ames Iowa, 50014"
 personal_email = "bradley.morgan.wells@gmail.com"
+personal_skype = "Bradleo99"
 
+personal_facebook = "https://www.facebook.com/bradley.wells.9406"
+personal_github = "https://github.com/BradWells"
+personal_gplus = "https://plus.google.com/u/0/+BradWells1993"
+personal_linkedin = "http://lnkd.in/bExnV4Y"
+# Note, I also have a Skype button I made using their online tool.
 
 class linkObj:
     """A container for relative links and their paired names"""
@@ -61,7 +69,12 @@ def contact():
         resume_rel_url = resume_rel_url,
         personal_phone = personal_phone,
         personal_address = personal_address,
-        personal_email = personal_email
+        personal_email = personal_email,
+        personal_skype = personal_skype,
+        personal_facebook = personal_facebook,
+        personal_gplus = personal_gplus,
+        personal_github = personal_github,
+        personal_linkedin = personal_linkedin
         )
 
 @app.route('/projects')
