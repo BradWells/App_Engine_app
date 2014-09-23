@@ -34,3 +34,9 @@ h2              { border-bottom: 1px solid #ddd; }
 .jumbotron h1 {
     border-bottom: 2px solid #222222;
 }
+
+.credit {
+    font-size: 9px;
+    text-align: right;
+    padding-right: 10px;
+}
