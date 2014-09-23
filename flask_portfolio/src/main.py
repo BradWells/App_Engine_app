@@ -18,6 +18,7 @@ personal_facebook = "https://www.facebook.com/bradley.wells.9406"
 personal_github = "https://github.com/BradWells"
 personal_gplus = "https://plus.google.com/u/0/+BradWells1993"
 personal_linkedin = "http://lnkd.in/bExnV4Y"
+# https://www.linkedin.com/pub/bradley-wells/84/51a/983
 # Note, I also have a Skype button I made using their online tool.
 
 class linkObj:
