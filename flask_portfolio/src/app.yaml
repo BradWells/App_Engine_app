@@ -17,11 +17,10 @@ handlers:
   static_files: static/robots.txt
   upload: static/robots.txt
 
-#TODO make this for all js files
 # Static javascript file
-- url: /image_grid_loader.js
-  static_files: static/image_grid_loader.js
-  upload: static/image_grid_loader.js
+- url: /(.*\.js)$
+  static_files: static/\1
+  upload: static/.*\.js
 
 # Alternative:
 # - url: /images
