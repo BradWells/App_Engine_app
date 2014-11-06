@@ -19,4 +19,7 @@ function loadImages() {
             });
         }
     });
+
+    /** Run the grid maker code **/
+    $('.photoset-grid-basic').photosetGrid();
 }
