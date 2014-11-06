@@ -5,22 +5,17 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-# All URLs ending in .gif .png or .jpg are treated as paths to static files in
+# All URLs ending in .js .gif .png or .jpg are treated as paths to static files in
 # the static/ directory. The URL pattern is a regexp, with a grouping that is
 # inserted into the path to the file.
-- url: /(.*\.(gif|png|jpg|pdf))$
+- url: /(.*\.(gif|png|jpg|pdf|js))$
   static_files: static/\1
-  upload: static/.*\.(gif|png|jpg|pdf)$
+  upload: static/.*\.(gif|png|jpg|pdf|js)$
 
 # Static robots.txt
 - url: /robots.txt
   static_files: static/robots.txt
   upload: static/robots.txt
-
-# Static javascript file
-- url: /(.*\.js)$
-  static_files: static/\1
-  upload: static/.*\.js
 
 # Alternative:
 # - url: /images
