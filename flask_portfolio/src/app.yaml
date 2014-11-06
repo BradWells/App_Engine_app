@@ -20,8 +20,8 @@ handlers:
 #TODO make this for all js files
 # Static javascript file
 - url: /image_grid_loader.js
-  static_files: js/image_grid_loader.js
-  upload: js/image_grid_loader.js
+  static_files: static/image_grid_loader.js
+  upload: static/image_grid_loader.js
 
 # Alternative:
 # - url: /images
