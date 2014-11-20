@@ -91,6 +91,18 @@ def projects():
         resume_rel_url = resume_rel_url
         )
 
+@app.route('/reflection')
+def reflection():
+    """A page of my reflection"""
+    return render_template(
+        'reflection.html',
+        personal_url = personal_url,
+        home_url = url_for('home'),
+        title = "Reflection",
+        projects = projList,
+        resume_rel_url = resume_rel_url
+        )
+
 @app.errorhandler(404)
 def page_not_found(e):
     """Return a custom 404 error."""
