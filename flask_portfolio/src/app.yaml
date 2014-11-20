@@ -17,6 +17,11 @@ handlers:
   static_files: static/robots.txt
   upload: static/robots.txt
 
+# Icons
+- url: /icons/(.*\.(gif|png|jpg|pdf))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg|pdf)$
+
 # Alternative:
 # - url: /images
 #   static_dir: static/images
